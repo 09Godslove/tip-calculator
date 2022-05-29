@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html body{
+    font-family: 'Space Mono', monospace;
+    background-color: hsl(185, 41%, 84%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+.calc{
+    width: 100%;
+    background-color: hsl(0, 0%, 100%);
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.calc-left, .calc-right{
+    width: 50%;
+    height: 100%;
+}
+.calc-left{
+    margin-right: 20px;
+}
+@media screen and (max-width: 760px) {
+    .calc{
+        flex-direction: column;
+    }
+    .calc-left, .calc-right{
+        width: 100%;
+        align-self: stretch;
+        min-height: 100%;
+    }
+}
+
+.cl-input{
+    margin-bottom: 1rem;
+}
+.form-input{
+    width:100%;
+    display: flex;
+    background-color: hsl(189, 41%, 97%);
+    padding: 0.4rem 0;
+    border-radius: 5px;
+    border: 2px solid hsl(189, 41%, 97%);
+}
+.form-input:hover{
+    border: 2px solid hsl(172, 67%, 45%);
+}
+.form-input span{
+    width: 45px;
+    text-align: center;
+    color: hsl(185, 41%, 84%);
+}
+::placeholder{
+    color: hsl(183, 100%, 15%);
+    font-size: 1rem;
+    font-weight: 700;
+}
+.form-input input{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-weight: 700;
+    text-align: right;
+    padding-right: 15px;
+    color: hsl(183, 100%, 15%);
+}
+.form-input input:focus{
+    outline: none;
+}
+.cl-input label{
+    color: hsl(185, 41%, 84%);
+    font-size: 0.8rem;
+    margin: 5px o;
+    background-color: transparent;
+}
+.tips-label{
+    color:hsl(185, 41%, 84%);
+    margin-bottom: 0.5rem;
+}
+.cl-tips{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 2rem;
+}
+
+.cl-tip{
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 0.1rem 0rem;
+    width: 30%;
+    text-align: center;
+    border-radius: 4px;
+    border: 2px solid hsl(183, 100%, 15%);
+    cursor: pointer;
+
+}
+.cl-tip:hover{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(185, 41%, 84%);
+    border: 2px solid hsl(185, 41%, 84%);
+}
+.cl-tip-custom{
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+}
+.cl-tip-custom:hover{
+    border: 2px solid hsl(172, 67%, 45%);
+    background-color: hsl(189, 41%, 97%);
+}
+.cl-tip-custom input{
+    width: 100%;
+    border: none;
+    height: 100%;
+    border-radius: 2px;
+    background-color:transparent;
+    text-align: right;
+    color: hsl(183, 100%, 15%);
+    padding-right: 15px;
+}
+.cl-tip-custom input:focus{
+    outline: none;
+}
+.cl-tip-custom input::placeholder{
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: hsl(185, 41%, 84%);
+    
+}
+@media screen and (max-width: 400px) {
+    .cl-tips{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .cl-tip{
+        width: 40%;
+    }
+}
+.calc-right {
+    background-color:hsl(183, 100%, 15%) ;
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+}
+.tip{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.tip-info{
+    opacity: 0.5;
+}
+.tip-info .title{
+    color: hsl(0, 0%, 100%);
+    font-size: 0.8rem;
+}
+.tip-info .tip-sub-title{
+    color: hsl(0, 0%, 100%);
+    font-size: 0.6rem;
+}
+.tip-amount img{
+    margin-right: 2px;
+    background-color: transparent;
+    color: hsl(172, 67%, 45%);
+}
+.tip-amount{
+    font-size: 2rem;
+    color: hsl(172, 67%, 45%);
+
+}
+.tip-action{
+    margin-top: 4rem;
+}
+.tip-action-btn{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(183, 100%, 20%);
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    color: hsl(183, 100%, 15%);
+    cursor: pointer;
+}
+.tip-action-btn:hover{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(185, 41%, 84%);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%);}
